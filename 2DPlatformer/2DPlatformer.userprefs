@@ -1,8 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ArmRotation.cs">
     <Files>
       <File FileName="Assets\Sample Assets\2D\Scripts\PlatformerCharacter2D.cs" Line="26" Column="17" />
+      <File FileName="Assets\ArmRotation.cs" Line="16" Column="71" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
