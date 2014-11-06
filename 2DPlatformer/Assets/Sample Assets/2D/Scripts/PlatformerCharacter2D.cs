@@ -20,6 +20,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 	float ceilingRadius = .01f;							// Radius of the overlap circle to determine if the player can stand up
 	Animator anim;										// Reference to the player's animator component.
 
+	private Transform playerGraphics;					// Reference to the graphics so we can change directions.
+
 
     void Awake()
 	{
@@ -27,6 +29,11 @@ public class PlatformerCharacter2D : MonoBehaviour
 		groundCheck = transform.Find("GroundCheck");
 		ceilingCheck = transform.Find("CeilingCheck");
 		anim = GetComponent<Animator>();
+		playerGraphics = transform.FindChild ("Graphics");
+
+		if (playerGraphics == null) {
+			Debug.LogError ("Let's freak out ! There is no 'Graphics' object as a child of the player");
+		}
 	}
 
 
@@ -93,8 +100,8 @@ public class PlatformerCharacter2D : MonoBehaviour
 		facingRight = !facingRight;
 		
 		// Multiply the player's x local scale by -1.
-		Vector3 theScale = transform.localScale;
+		Vector3 theScale = playerGraphics.localScale;
 		theScale.x *= -1;
-		transform.localScale = theScale;
+		playerGraphics.localScale = theScale;
 	}
 }
